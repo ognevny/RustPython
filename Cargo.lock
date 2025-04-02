@@ -369,7 +369,7 @@ dependencies = [
  "log",
  "regalloc2",
  "smallvec",
- "target-lexicon",
+ "target-lexicon 0.12.6",
 ]
 
 [[package]]
@@ -402,7 +402,7 @@ dependencies = [
  "cranelift-codegen",
  "log",
  "smallvec",
- "target-lexicon",
+ "target-lexicon 0.12.6",
 ]
 
 [[package]]
@@ -425,7 +425,7 @@ dependencies = [
  "libc",
  "log",
  "region",
- "target-lexicon",
+ "target-lexicon 0.12.6",
  "windows-sys 0.36.1",
 ]
 
@@ -447,7 +447,7 @@ checksum = "20937dab4e14d3e225c5adfc9c7106bafd4ac669bdb43027b911ff794c6fb318"
 dependencies = [
  "cranelift-codegen",
  "libc",
- "target-lexicon",
+ "target-lexicon 0.12.6",
 ]
 
 [[package]]
@@ -909,6 +909,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
 
 [[package]]
+name = "heck"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+
+[[package]]
 name = "hermit-abi"
 version = "0.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1019,7 +1025,7 @@ dependencies = [
  "pmutil 0.6.1",
  "proc-macro2",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1476,7 +1482,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1493,9 +1499,9 @@ checksum = "0ab1bc2a289d34bd04a330323ac98a1b4bc82c9d9fcb1e66b63caa84da26b575"
 
 [[package]]
 name = "openssl"
-version = "0.10.62"
+version = "0.10.70"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8cde4d2d9200ad5909f8dac647e29482e07c3a35de8a13fce7c9c7747ad9f671"
+checksum = "61cfb4e166a8bb8c9b55c500bc2308550148ece889be90f609377e58140f42c6"
 dependencies = [
  "bitflags 2.5.0",
  "cfg-if",
@@ -1508,13 +1514,13 @@ dependencies = [
 
 [[package]]
 name = "openssl-macros"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b501e44f11665960c7e7fcf062c7d96a14ade4aa98116c004b2e37b5be7d736c"
+checksum = "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 1.0.109",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1534,9 +1540,9 @@ dependencies = [
 
 [[package]]
 name = "openssl-sys"
-version = "0.9.98"
+version = "0.9.106"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c1665caf8ab2dc9aef43d1c0023bd904633a6a05cb30b0ad59bec2ae986e57a7"
+checksum = "8bb61ea9811cc39e3c2069f40b8b8e2e70d8569b361f879786cc7ed48b777cdd"
 dependencies = [
  "cc",
  "libc",
@@ -1681,8 +1687,14 @@ checksum = "52a40bc70c2c58040d2d8b167ba9a5ff59fc9dab7ad44771cfde3dcfde7a09c6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
+
+[[package]]
+name = "portable-atomic"
+version = "1.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "350e9b48cbc6b0e028b0473b114454c6316e57336ee184ceab6e53f72c178b3e"
 
 [[package]]
 name = "ppv-lite86"
@@ -1702,9 +1714,9 @@ dependencies = [
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.79"
+version = "1.0.94"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e835ff2298f5721608eb1a980ecaee1aef2c132bf95ecc026a11b7bf3c01c02e"
+checksum = "a31971752e70b8b2686d7e46ec17fb38dad4051d94024c88df49b667caea9c84"
 dependencies = [
  "unicode-ident",
 ]
@@ -1717,15 +1729,16 @@ checksum = "06a1eed715f625eaa95fba5e049dcf7bc06fa396d6d2e55015b3764e234dfd3f"
 
 [[package]]
 name = "pyo3"
-version = "0.20.2"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9a89dc7a5850d0e983be1ec2a463a171d20990487c3cfcd68b5363f1ee3d6fe0"
+checksum = "17da310086b068fbdcefbba30aeb3721d5bb9af8db4987d6735b2183ca567229"
 dependencies = [
  "cfg-if",
  "indoc",
  "libc",
  "memoffset 0.9.1",
- "parking_lot",
+ "once_cell",
+ "portable-atomic",
  "pyo3-build-config",
  "pyo3-ffi",
  "pyo3-macros",
@@ -1734,19 +1747,19 @@ dependencies = [
 
 [[package]]
 name = "pyo3-build-config"
-version = "0.20.2"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07426f0d8fe5a601f26293f300afd1a7b1ed5e78b2a705870c5f30893c5163be"
+checksum = "e27165889bd793000a098bb966adc4300c312497ea25cf7a690a9f0ac5aa5fc1"
 dependencies = [
  "once_cell",
- "target-lexicon",
+ "target-lexicon 0.13.2",
 ]
 
 [[package]]
 name = "pyo3-ffi"
-version = "0.20.2"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dbb7dec17e17766b46bca4f1a4215a85006b4c2ecde122076c562dd058da6cf1"
+checksum = "05280526e1dbf6b420062f3ef228b78c0c54ba94e157f5cb724a609d0f2faabc"
 dependencies = [
  "libc",
  "pyo3-build-config",
@@ -1754,33 +1767,34 @@ dependencies = [
 
 [[package]]
 name = "pyo3-macros"
-version = "0.20.2"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "05f738b4e40d50b5711957f142878cfa0f28e054aa0ebdfc3fd137a843f74ed3"
+checksum = "5c3ce5686aa4d3f63359a5100c62a127c9f15e8398e5fdeb5deef1fed5cd5f44"
 dependencies = [
  "proc-macro2",
  "pyo3-macros-backend",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
 
 [[package]]
 name = "pyo3-macros-backend"
-version = "0.20.2"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0fc910d4851847827daf9d6cdd4a823fbdaab5b8818325c5e97a86da79e8881f"
+checksum = "f4cf6faa0cbfb0ed08e89beb8103ae9724eb4750e3a78084ba4017cbe94f3855"
 dependencies = [
- "heck",
+ "heck 0.5.0",
  "proc-macro2",
+ "pyo3-build-config",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
 
 [[package]]
 name = "quote"
-version = "1.0.33"
+version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
+checksum = "1885c039570dc00dcb4ff087a89e185fd56bae234ddc7f056a945bf36467248d"
 dependencies = [
  "proc-macro2",
 ]
@@ -2589,7 +2603,7 @@ version = "0.24.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e385be0d24f186b4ce2f9982191e7101bb737312ad61c1f2f984f34bcf85d59"
 dependencies = [
- "heck",
+ "heck 0.4.1",
  "proc-macro2",
  "quote",
  "rustversion",
@@ -2615,9 +2629,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.32"
+version = "2.0.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "239814284fd6f1a4ffe4ca893952cdd93c224b6a1571c9a9eadd670295c0c9e2"
+checksum = "b09a44accad81e1ba1cd74a32461ba89dee89095ba17b32f5d03683b1b1fc2a0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2659,6 +2673,12 @@ name = "target-lexicon"
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ae9980cab1db3fceee2f6c6f643d5d8de2997c58ee8d25fb0cc8a9e9e7348e5"
+
+[[package]]
+name = "target-lexicon"
+version = "0.13.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e502f78cdbb8ba4718f566c418c52bc729126ffd16baee5baa718cf25dd5a69a"
 
 [[package]]
 name = "termcolor"
@@ -3517,5 +3537,5 @@ checksum = "9ce1b18ccd8e73a9321186f97e46f9f04b778851177567b1975109d26a08d2a6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.32",
+ "syn 2.0.100",
 ]
